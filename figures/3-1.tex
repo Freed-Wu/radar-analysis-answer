@@ -1,0 +1,17 @@
+\documentclass[tikz]{standalone}
+\usepackage{pgfplots}
+\begin{document}
+
+\begin{tikzpicture}[transform shape]
+  \begin{axis}[
+      xticklabels = {, $-\frac{T_1 + T_2}{2}$, $-\frac{T_1}{2}$, 0, $\frac{T_1}{2}$, $\frac{T_1 + T_2}{2}$},
+      xlabel = $t$,
+      ylabel = $\mu(t)$,
+    ]
+    \addplot[domain = -2:-1]{x + 2};
+    \addplot[domain = 1:2]{2 - x};
+    \addplot[domain = -1:1]{1};
+  \end{axis}
+\end{tikzpicture}
+
+\end{document}
